@@ -68,10 +68,10 @@
         "certificate_${name}": {
           "class": "Certificate",
           "certificate": {
-            "bigip": "/Common/default.crt"
+            "bigip": "/Common/${name}.crt"
           },
           "privateKey": {
-            "bigip": "/Common/default.key"
+            "bigip": "/Common/${name}.key"
           }
         }
       }
