@@ -26,7 +26,15 @@
             "bigip": "/Common/serverssl"
           },
           %{ endif }
-          "pool": "pool_${name}"
+          "pool": "pool_${name}",
+          "policyWAF": {
+            "bigip": "/Common/asmpolicy_${name}"
+          },
+          "securityLogProfiles": [
+            {
+              "bigip": "/Common/Log illegal requests"
+            }
+          ]
         },
         "pool_${name}": {
           "class": "Pool",
